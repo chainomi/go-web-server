@@ -1,17 +1,17 @@
 # go-web-server
 
-## Requirements
+## Deployment
 
-Write a Dockerfile that compiles and then runs the web server in this repository.  
+### Dockerfile
+Enter `$ ./ci/deploy-dockerfile.sh` on the terminal to build image and deploy server with docker build and run commands
 
-Please write it as if the container will be used in production.  
+### Docker compose
+Enter `$ ./ci/deploy-docker-compose.sh` on the terminal to build image and deploy server with docker build and run commands
 
-1. The Dockerfile must build an image for this go-web-server successfully.
-2. The image must run successfully and have the go-web-server listening on port 3030.
-3. Once you have the Dockerfile running **please provide the response** returned from the `/keyword` route to us.  
-
-## Details
-
-It exposes a web server on port 3030 and logs to STDOUT.  The port is configurable by setting the PORT environment variable.  
-
-It has several routes that return status code 200 and some data: `/health`, `/hello`, and `/keyword`. All other routes will return 404: "404 page not found".  
+### Testing server locally
+Testing endpoints below show display the messages below
+1. http://localhost:8081/hello - displays `188: responding from the go-web-server`
+2. http://localhost:8081/health - displays `153: ok`
+3. http://localhost:8081/keyword - displays `153: wellness`
+4. http://localhost:8081/ - displays `404`
+ 
