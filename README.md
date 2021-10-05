@@ -3,10 +3,10 @@
 ## Deployment
 
 ### Dockerfile
-Enter `$ ./ci/deploy-dockerfile.sh` on the terminal to build image and deploy server with docker build and run commands
+From terminal and in root directory, enter `$ ./ci/deploy-dockerfile.sh` to build image and deploy server with docker build and run commands.
 
 ### Docker compose
-Enter `$ ./ci/deploy-docker-compose.sh` on the terminal to build image and deploy server with docker build and run commands
+From terminal and in root directory, enter `$ ./ci/deploy-docker-compose.sh` to build image and deploy server with docker compose.
 
 ### Testing server locally
 Testing endpoints below show display the messages below
